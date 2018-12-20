@@ -31,6 +31,10 @@ function regexify(val) {
   if (_.isRegExp(val)) return val;
   throw new TypeError("illegal type for regexify");
 };
+
+exports.list = function (val) {
+  return val ? val.split(",") : [];
+};
  
 function arrayify(val) {
   if (!val) return [];
